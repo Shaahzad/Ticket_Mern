@@ -18,7 +18,7 @@ const connect =  ()=>{
 
 //middlewear
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://ticket-mern-back.vercel.app",
     credentials:  true,
 }))
 app.use(cookieParser())
