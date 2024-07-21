@@ -9,7 +9,7 @@ import {useNavigate} from "react-router-dom"
 
 const Reserve = ({ setopenmodal, hotelId }) => {
     const [selectedRoom, setSelectedRoom] = useState([])
-    const { data, loading, error } = useFetch(`http://localhost:9000/api/hotels/room/${hotelId}`)
+    const { data, loading, error } = useFetch(`https://ticket-mern-back.vercel.app/api/hotels/room/${hotelId}`)
     const { dates } = useContext(searchContext)
 
     const getDatesInRange = (startDate, endDate) => {
@@ -41,7 +41,7 @@ const navigate = useNavigate()
     const handleClick = async () => {
         try {
             await Promise.all(selectedRoom.map((roomId) => {
-                const res = axios.put(`http://localhost:9000/api/rooms/availability/${roomId}`, {dates: allDates})
+                const res = axios.put(`https://ticket-mern-back.vercel.app/api/rooms/availability/${roomId}`, {dates: allDates})
                 return res.data
             }))
             setopenmodal(false)

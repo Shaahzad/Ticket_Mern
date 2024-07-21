@@ -19,9 +19,9 @@ const List = () => {
   let api;
   
  if(min === undefined && max === undefined){
-  api = `http://localhost:9000/api/hotels?city=${Destination}`
+  api = `https://ticket-mern-back.vercel.app/api/hotels?city=${Destination}`
  }else{
-  api = `http://localhost:9000/api/hotels?city=${Destination}&min=${min}&max=${max}`
+  api = `https://ticket-mern-back.vercel.app/api/hotels?city=${Destination}&min=${min}&max=${max}`
  }
  const {data,error,loading,refetch} = useFetch(api)
 

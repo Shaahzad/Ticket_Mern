@@ -3,7 +3,7 @@ import "./propertylist.css"
 import useFetch from '../../fetch/usefetch'
 const Propertylist = () => {
 
-    const {data,error,loading} = useFetch("http://localhost:9000/api/hotels/countbyType")
+    const {data,error,loading} = useFetch("https://ticket-mern-back.vercel.app/api/hotels/countbyType")
  
     const images = [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjsJTf-bcAVzE9JwE_vgv8sdCZi5wrO0v-5w&s",

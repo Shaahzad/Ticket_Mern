@@ -3,7 +3,7 @@ import "./featureproperty.css"
 import useFetch from '../../fetch/usefetch'
 const Featureproperty = () => {
 
-    const {data,error,loading} = useFetch("http://localhost:9000/api/hotels?featured=true&limit=4")
+    const {data,error,loading} = useFetch("https://ticket-mern-back.vercel.app/api/hotels?featured=true&limit=4")
 
   return (
     <div className='fp'>

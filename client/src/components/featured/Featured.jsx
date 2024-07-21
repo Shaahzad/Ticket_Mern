@@ -2,7 +2,7 @@ import useFetch from "../../fetch/usefetch"
 import "./feature.css"
 const Featured = () => {
 
-const {data,error,loading} = useFetch("http://localhost:9000/api/hotels/countbyCity?cities=karachi,lahore,islamabad")
+const {data,error,loading} = useFetch("https://ticket-mern-back.vercel.app/api/hotels/countbyCity?cities=karachi,lahore,islamabad")
 console.log(data)
 
 

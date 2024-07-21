@@ -18,7 +18,7 @@ const Hotel = () => {
   const [open,setopen] = useState(false)
   const [openmodal,setopenmodal] = useState(false)
 
-  const {data,loading,error,} = useFetch(`http://localhost:9000/api/hotels/find/${id}`)
+  const {data,loading,error,} = useFetch(`https://ticket-mern-back.vercel.app/api/hotels/find/${id}`)
 
   const {dates,options} = useContext(searchContext)
   console.log(options)

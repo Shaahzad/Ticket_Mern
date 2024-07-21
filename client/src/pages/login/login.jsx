@@ -22,7 +22,7 @@ const handelCLick = async (e)=>{
 e.preventDefault()
 dispatch({type: "LOGIN_START"})
 try {
-    const res = await axios.post("http://localhost:9000/api/auth/login", credentials,{withCredentials: true})
+    const res = await axios.post("https://ticket-mern-back.vercel.app/api/auth/login", credentials,{withCredentials: true})
     console.log(res)
     dispatch({type: "LOGIN_SUCCESS", payload: res.data.details})
     navigate("/")
