@@ -23,6 +23,11 @@ app.use(cors({
 }))
 app.use(cookieParser())
 app.use(express.json())
+
+app.get("/", (req,res)=>{
+    res.send("hello")
+})
+
 app.use("/api/auth", AuthRoute)
 app.use("/api/hotels", HotelsRoute)
 app.use("/api/rooms", RoomsRoute)
